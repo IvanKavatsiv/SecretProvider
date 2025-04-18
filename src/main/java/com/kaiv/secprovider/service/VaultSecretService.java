@@ -19,7 +19,7 @@ public class VaultSecretService {
 
     public void saveSecretToVault(ConnectionProtocol currentProtocol, SecretData secret) {
 
-        String currentPath = vaultPath + ":" + currentProtocol.getProtocolType() + ":" + currentProtocol.getId();
+        String currentPath = vaultPath + currentProtocol.getProtocolType() + ":" + currentProtocol.getId();
 
         kvOperations.put(currentPath, secret);
     }

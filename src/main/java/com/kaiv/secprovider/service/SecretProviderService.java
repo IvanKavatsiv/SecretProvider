@@ -21,7 +21,7 @@ public class SecretProviderService {
     public SecretData getCredentialsForProtocol(ConnectionProtocol connectionProtocol) {
         ProtocolType protocolType = connectionProtocol.getProtocolType();
         SecretProvider provider = secretProviderFactory.getProvider(protocolType);
-        String currentPath = vaultGeneralPath + ":" + protocolType + ":" + connectionProtocol.getId();
+        String currentPath = vaultGeneralPath + protocolType + ":" + connectionProtocol.getId();
         return provider.getSecret(currentPath);
     }
 }

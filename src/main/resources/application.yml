@@ -1,7 +1,10 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: my-vault-client
-    vault-path: myapp/protocol
+    vault-path: myapp/
 
   cloud:
     vault:
